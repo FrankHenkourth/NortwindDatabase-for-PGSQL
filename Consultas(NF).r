@@ -17,6 +17,13 @@ con <- dbConnect(RPostgres::Postgres(),
 
 
 clientes <- dbGetQuery(con, "SELECT * FROM Customers;")
+categories <- dbGetQuery(con, "SELECT * FROM Categories")
+employees <- dbGetQuery(con, "SELECT * FROM Employees")
+shippers <- dbGetQuery(con, "SELECT * FROM Shippers")
+suppliers <- dbGetQuery(con, "SELECT * FROM Suppliers")
+products <- dbGetQuery(con, "SELECT * FROM Products")
+orders <- dbGetQuery(con, "SELECT * FROM Orders")
+order_details <- dbGetQuery(con, "SELECT * FROM OrderDetails")
 print(clientes)
 
 # número de productos por categoría
